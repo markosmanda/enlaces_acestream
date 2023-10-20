@@ -21,8 +21,8 @@ def json_a_m3u(archivo_json, archivo_m3u):
                 nombre = canal["Name"]
                 url = canal["Link"]
                 image = canal["Image"]
-                web=canal["Website"]
-                m3u_file.write(f"#EXTINF:-1,{nombre}\n{url}\n{image}\n{web}\n")
+                
+                m3u_file.write(f"#EXTINF:-1,{nombre}\n{url}\n{image}")
                 
         print(f'Archivo M3U creado: {archivo_m3u}')
     except Exception as e:
